@@ -1,0 +1,19 @@
+{
+  "name": "com.nebukam.signals",
+  "version": "0.0.1",
+  "displayName": "N:Signals",
+  "description": "Targeted messaging framework, inspired by Robert Penner Signals.",
+  "unity": "2019.1",
+  "unityRelease": "10f1",
+  "keywords": [
+    "Messaging",
+    "Events",
+    "Signals"
+  ],
+  "category": "Utils",
+  "author": {
+    "name": "Timothe Lapetite",
+    "email": "nebukam@gmail.com",
+    "url": "https://github.com/Nebukam/com.nebukam.signals.git"
+  }
+}
