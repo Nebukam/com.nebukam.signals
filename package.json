@@ -15,5 +15,12 @@
     "name": "Timothe Lapetite",
     "email": "nebukam@gmail.com",
     "url": "https://github.com/Nebukam/com.nebukam.signals.git"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "HowTo",
+      "description": "Reference code showing how to setup and use N:Signals.",
+      "path": "Samples~/HowTo"
+    }
+  ]
 }

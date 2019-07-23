@@ -4,18 +4,38 @@ namespace Nebukam.Signals
 {
 
     /// <summary>
-    /// Publicly available generic signal interface
+    /// Signal dispatches events to multiple listeners.
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    /// <remark>
+    /// Signals interface should be exposed to the public as they offer safe subscription
+    /// However, actual signal management (Dispatch & RemoveAll) is left enclosed at the object level
+    /// in order to offer greater control over who can and cannot dispatch the signal.
+    /// </remark>
     public interface IBaseSignal<T>
     {
+        /// <summary>
+        /// Subscribe a listener for the signal.
+        /// </summary>
+        /// <param name="callback"></param>
         void Add(T callback);
+
+        /// <summary>
+        /// Subscribe a listener for the signal, once.
+        /// The listener will automatically unsubscribe after the next dispatch
+        /// </summary>
+        /// <param name="callback"></param>
         void AddOnce(T callback);
+
+        /// <summary>
+        /// Unscribe a listener from the signal
+        /// </summary>
+        /// <param name="callback"></param>
         void Remove(T callback);
     }
 
     /// <summary>
-    /// Generic base for signals
+    /// Signal dispatches events to multiple listeners.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class BaseSignal<T>
@@ -26,7 +46,11 @@ namespace Nebukam.Signals
         internal List<T> _subscribers = new List<T>(10);
         internal List<T> _deprecated = null;
         internal HashSet<T> _once = new HashSet<T>();
-        
+
+        /// <summary>
+        /// Subscribe a listener for the signal.
+        /// </summary>
+        /// <param name="callback"></param>
         public void Add(T callback)
         {
 
@@ -39,6 +63,11 @@ namespace Nebukam.Signals
                 _once.Remove(callback);
         }
 
+        /// <summary>
+        /// Subscribe a listener for the signal, once.
+        /// The listener will automatically unsubscribe after the next dispatch
+        /// </summary>
+        /// <param name="callback"></param>
         public void AddOnce(T callback)
         {
 
@@ -49,6 +78,10 @@ namespace Nebukam.Signals
             _once.Add(callback);
         }
 
+        /// <summary>
+        /// Unscribe a listener from the signal
+        /// </summary>
+        /// <param name="callback"></param>
         public void Remove(T callback)
         {
             if(_dispatching)
@@ -66,6 +99,11 @@ namespace Nebukam.Signals
             _once.Remove(callback);
         }
 
+        /// <summary>
+        /// Called by Dispatch method once they traversed the list of suscribers.
+        /// Unsubscriptions that were left unapplied during dispatch 
+        /// are processed by this methode, as well as removing all 'once' subscribers.
+        /// </summary>
         internal void PostDispatch()
         {
 
@@ -89,7 +127,7 @@ namespace Nebukam.Signals
         }
 
         /// <summary>
-        /// Flush all delegate from the stack
+        /// Remove all subscribers
         /// </summary>
         public void RemoveAll()
         {
