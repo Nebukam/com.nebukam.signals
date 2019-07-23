@@ -17,6 +17,35 @@ N:Signals is a micro library for lightweight, strongly-typed messassing manipula
 ---
 ## Hows
 
+### Syntax
+#### Without arguments
+
+```C#
+//FOO object
+//Create signal
+protected Signal m_beep = new Signal();
+//Expose signal through ISignal interface (keeps Dispatch method internal)
+public ISignal beep { get{ return m_beep;} }
+...
+
+//Subcribe to 'beep'
+foo.beep.Add(callback);
+...
+
+//FOO object
+//Notify all 'beep' subscribers.
+m_beep.Dispatch();
+```
+
+#### With arguments
+
+```C#
+//As simple as without.
+protected Signal<int, string> m_boop = new Signal<int, string>();
+...
+m_boop.Dispatch(777, "BOOP");
+```
+
 ### Installation
 To be used with Unity's Package Manager.
 
