@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace Nebukam.Signals
 {
 
@@ -29,7 +26,7 @@ namespace Nebukam.Signals
         /// <typeparam name="T2"></typeparam>
         /// <param name="arg1"></param>
         /// <param name="arg2"></param>
-        public delegate void Signal<T1,T2>(T1 arg1, T2 arg2);
+        public delegate void Signal<T1, T2>(T1 arg1, T2 arg2);
 
         /// <summary>
         /// Delegate for three-arguments callbacks
@@ -56,6 +53,6 @@ namespace Nebukam.Signals
         public delegate void Signal<T1, T2, T3, T4>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
 
     }
-    
+
 }
 

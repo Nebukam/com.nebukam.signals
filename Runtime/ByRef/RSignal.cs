@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-
 namespace Nebukam.Signals
 {
-    
+
     public interface IRSignal<T> : IBaseSignal<RSignalDelegates.Signal<T>> { }
     public class RSignal<T> : BaseSignal<RSignalDelegates.Signal<T>>, IRSignal<T>
     {
@@ -41,7 +38,7 @@ namespace Nebukam.Signals
     }
 
     public interface IRSignal<T1, T2> : IBaseSignal<RSignalDelegates.Signal<T1, T2>> { }
-    public class RSignal<T1, T2> : BaseSignal<RSignalDelegates.Signal<T1, T2>>, IRSignal<T1, T2> 
+    public class RSignal<T1, T2> : BaseSignal<RSignalDelegates.Signal<T1, T2>>, IRSignal<T1, T2>
     {
 
         public RSignal()

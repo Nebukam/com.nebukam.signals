@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace Nebukam.Signals
+﻿namespace Nebukam.Signals
 {
-   
+
     public interface IRSignalMap<IdType, T> : IBaseSignalMap<IdType, RSignalDelegates.Signal<T>> { }
     public class RSignalMap<IdType, T> : BaseSignalMap<IdType, RSignalDelegates.Signal<T>, RSignal<T>>, IRSignalMap<IdType, T>
     {

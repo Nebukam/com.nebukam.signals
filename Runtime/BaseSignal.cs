@@ -84,7 +84,7 @@ namespace Nebukam.Signals
         /// <param name="callback"></param>
         public void Remove(T callback)
         {
-            if(_dispatching)
+            if (_dispatching)
             {
 
                 if (_deprecated == null)
@@ -107,9 +107,9 @@ namespace Nebukam.Signals
         internal void PostDispatch()
         {
 
-            if(_deprecated != null)
+            if (_deprecated != null)
             {
-                int c= _deprecated.Count;
+                int c = _deprecated.Count;
                 T callback;
 
                 for (int i = 0; i < c; i++)

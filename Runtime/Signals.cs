@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Nebukam.Signals
+﻿namespace Nebukam.Signals
 {
-    
+
     public interface ISignal : IBaseSignal<SignalDelegates.Signal> { }
     public class Signal : BaseSignal<SignalDelegates.Signal>, ISignal
     {

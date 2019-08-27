@@ -24,7 +24,7 @@ namespace Nebukam.Signals
     /// <typeparam name="IdType"></typeparam>
     /// <typeparam name="T"></typeparam>
     /// <typeparam name="TSignal"></typeparam>
-    public abstract class BaseSignalMap<IdType, T, TSignal> : IBaseSignalMap<IdType,T>
+    public abstract class BaseSignalMap<IdType, T, TSignal> : IBaseSignalMap<IdType, T>
         where TSignal : BaseSignal<T>, new()
     {
 
@@ -125,12 +125,12 @@ namespace Nebukam.Signals
 
                 _signalMap.Clear();
                 _signals.Clear();
-                
+
             }
             else
             {
                 int count = _signals.Count;
-                for(int i = 0; i < count; i++)
+                for (int i = 0; i < count; i++)
                 {
                     _signals[i].RemoveAll();
                 }
