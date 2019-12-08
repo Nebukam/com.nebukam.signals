@@ -1,9 +1,9 @@
 {
   "name": "com.nebukam.signals",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "displayName": "N:Signals",
   "description": "Micro library for targeted messaging & signals, inspired by Robert Penner.",
-  "unity": "2019.1",
+  "unity": "2019.3",
   "unityRelease": "10f1",
   "keywords": [
     "Messaging",
