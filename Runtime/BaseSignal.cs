@@ -34,6 +34,12 @@ namespace Nebukam.Signals
     /// </remark>
     public interface IBaseSignal<T>
     {
+
+        /// <summary>
+        /// Whether this signal has at least one suscriber
+        /// </summary>
+        bool hasSuscribers { get; }
+
         /// <summary>
         /// Subscribe a listener for the signal.
         /// </summary>
@@ -66,6 +72,11 @@ namespace Nebukam.Signals
         internal List<T> _subscribers = new List<T>(10);
         internal List<T> _deprecated = null;
         internal HashSet<T> _once = new HashSet<T>();
+
+        /// <summary>
+        /// Whether this signal has at least one suscriber
+        /// </summary>
+        public bool hasSuscribers { get { return _subscribers.Count > 0; } }
 
         /// <summary>
         /// Subscribe a listener for the signal.
