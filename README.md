@@ -47,7 +47,7 @@ m_boop.Dispatch(777, "BOOP");
 ```
 
 ### Installation
-To be used with [Unity's Package Manager](https://docs.unity3d.com/Manual/upm-ui-giturl.html) + [Git Dependency Resolver For Unity](https://github.com/mob-sakai/GitDependencyResolverForUnity) (or any git dependencies resolving package, really).
+To be used with [Unity's Package Manager](https://docs.unity3d.com/Manual/upm-ui-giturl.html) + [Git Dependency Resolver For Unity](https://github.com/mob-sakai/GitDependencyResolverForUnity).
 
 ⚠ [Git Dependency Resolver For Unity](https://github.com/mob-sakai/GitDependencyResolverForUnity) must be installed *before* in order to fetch nested git dependencies.
 {: .alert .alert-danger}
