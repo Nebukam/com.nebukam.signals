@@ -1,6 +1,7 @@
 ![preview](https://img.shields.io/badge/preview-orange.svg)
 ![version 0.0.1](https://img.shields.io/badge/version-0.0.1-blue.svg)
 ![in development](https://img.shields.io/badge/status-in%20development-blue.svg)
+[![doc](https://img.shields.io/badge/documentation-darkgreen.svg)](https://nebukam.github.io/docs/unity/com.nebukam.signals/)
 
 # N:Signals
 #### Micro signal & messaging system for Unity
