@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['add_0',['Add',['../interface_nebukam_1_1_signals_1_1_i_base_signal.html#a54e7c6be9e36d701a2d91794edfb01ea',1,'Nebukam.Signals.IBaseSignal.Add()'],['../class_nebukam_1_1_signals_1_1_base_signal.html#ad8d658be5d6efebd0ec702ad74418e5a',1,'Nebukam.Signals.BaseSignal.Add()'],['../interface_nebukam_1_1_signals_1_1_i_base_signal_map.html#a5fd79b03f393bb3daba99fe016038845',1,'Nebukam.Signals.IBaseSignalMap.Add()'],['../class_nebukam_1_1_signals_1_1_base_signal_map.html#a5da6f0889055ef3949bb0fdff94fd493',1,'Nebukam.Signals.BaseSignalMap.Add()']]],
-  ['addonce_1',['AddOnce',['../interface_nebukam_1_1_signals_1_1_i_base_signal.html#a1cc0d8f6faff386e650874096a157cb4',1,'Nebukam.Signals.IBaseSignal.AddOnce()'],['../class_nebukam_1_1_signals_1_1_base_signal.html#a0723dafcb605914e14a1deee46126240',1,'Nebukam.Signals.BaseSignal.AddOnce()'],['../interface_nebukam_1_1_signals_1_1_i_base_signal_map.html#a025e39db8970178422e1f33e5dec9c8d',1,'Nebukam.Signals.IBaseSignalMap.AddOnce()'],['../class_nebukam_1_1_signals_1_1_base_signal_map.html#a3e005a564c2f461a80af5c05ee54203e',1,'Nebukam.Signals.BaseSignalMap.AddOnce()']]]
-];
